@@ -30,10 +30,10 @@
 
 ```
 f_timer = PBCLK / prescaler = 80 000 000 / 256 = 312 500 Hz
-PR1     = f_timer × T - 1   = 312 500 × 0,1 - 1 = 31 249
+Timer Period = (f_timer × T) - 1   = (312 500 × 0,1) - 1 = 31 249
 ```
 
-PR1 est un registre 16 bits (max. 65535). Avec un prescaler de 64, on obtiendrait 124 999, une valeur trop grande : le prescaler 256 est donc nécessaire.
+C'est un timer 16 bits (max. 65535). Avec un prescaler de 64, on obtiendrait 124 999, une valeur trop grande !! Le prescaler 256 est donc celui qu'il faut utiliser.
 
 ## 2. Timing du chenillard (LED0 à LED3)
 
