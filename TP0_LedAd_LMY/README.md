@@ -22,6 +22,10 @@
 | Prescaler | 256 |
 | Timer Period | 31249 |
 
+**Image configuration :**
+
+<img width="555" height="281" alt="ConfigTimer1" src="https://github.com/user-attachments/assets/055774b8-84cc-4f98-9e66-1622f9792a6b" />
+
 **Calcul :**
 
 ```
