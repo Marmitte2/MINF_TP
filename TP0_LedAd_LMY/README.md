@@ -78,6 +78,6 @@ Le programme répond au cahier des charges du TP :
 Les mesures à l'oscilloscope confirment les durées calculées.
 
 **Difficultées rencontrées**
-- **Configuration du BSP, trouver les bon menus, etc.
-- **L'apparition et disparition du kit ETML-ES dans le BSP
+- Configuration du BSP, trouver les bon menus, etc.
+- L'apparition et disparition du kit ETML-ES dans le BSP
 
