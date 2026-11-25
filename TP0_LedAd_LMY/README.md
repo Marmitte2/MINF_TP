@@ -45,9 +45,8 @@ C'est un timer 16 bits (max. 65535). Avec un prescaler de 64, on obtiendrait 124
 **Réglages de l'oscilloscope :** CH1 = LED0, CH2 = LED1, CH3 = LED2, CH4 = LED3, base de temps 200 ms/div, déclenchement sur le flanc descendant de CH1.
 
 **Commentaire :**
-Les LEDs du kit sont actives à l'état bas : un niveau **bas (0 V)** correspond à une LED **allumée**.
-On observe qu'une seule LED est allumée à la fois et que chaque LED reste allumée **≈ 200 ms** (mesuré : ___ ms). Les LEDs s'allument successivement : LED0, puis LED1, puis LED2, puis LED3.
-Une même LED se rallume toutes les **8 × 200 ms = 1,6 s** (mesuré : ___ s).
+Les LEDs du kit sont actives à l'état bas -> 0 V correspond à une LED allumée.
+On observe qu'une seule LED est allumée à la fois et que chaque LED reste allumée 200 ms (mesuré : 200 ms). Les LEDs s'allument successivement : LED0, puis LED1, puis LED2, puis LED3.
 La durée de 200 ms correspond à 2 interruptions du timer 1 (2 × 100 ms).
 
 ## 3. Durée de 3 s avant `APP_STATE_SERVICE_TASKS`
