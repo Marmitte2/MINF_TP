@@ -33,14 +33,14 @@ f_timer = PBCLK / prescaler = 80 000 000 / 256 = 312 500 Hz
 
 Timer Period = (f_timer × T) - 1   = (312 500 × 0,1) - 1 = 31 249
 
---Légende : PBCLK (fréquence interne du PIC -> 80MHz), T période d'interruption (toutes les 100ms -> selon consigne TP)
+-> Légende : PBCLK (fréquence interne du PIC -> 80MHz), T période d'interruption (toutes les 100ms -> selon consigne TP)
 ```
 
 C'est un timer 16 bits (max. 65535). Avec un prescaler de 64, on obtiendrait 124 999, une valeur trop grande !! Le prescaler 256 est donc celui qu'il faut utiliser.
 
 ## 2. Timing du chenillard (LED0 à LED3)
 
-
+<img width="1462" height="914" alt="Capture d&#39;écran 2026-11-23 151725" src="https://github.com/user-attachments/assets/bc90a0e4-3798-43b6-b547-157332d861eb" />
 
 **Réglages de l'oscilloscope :** CH1 = LED0, CH2 = LED1, CH3 = LED2, CH4 = LED3, base de temps 200 ms/div, déclenchement sur le flanc descendant de CH1.
 
