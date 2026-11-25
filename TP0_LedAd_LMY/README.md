@@ -67,3 +67,17 @@ Sur l'oscillogramme, après les 3s d'attente, c'est la LED1 (trace verte) qui s'
 
 La variable "led" démarre à 0, mais elle est incrémentée avant l'allumage. Au premier changement de LED, le programme éteint donc la LED0, passe à la LED1 et l'allume. c'est la raison pour laquelle la LED1 est allumée en premier. Si on veut allumer la LED0 en premier il faudrait initialiser la variable "led" à 7.
 
+## Conclusion
+
+Le programme répond au cahier des charges du TP :
+- le timer 1 génère une interruption toutes les 100ms
+- après un délai de 3 secondes, la machine d'état passe dans "APP_STATE_SERVICE_TASKS"
+- les 2 potentiomètres sont lus par l'ADC et leur valeur brutes s'affichent sur le LCD
+- le chenillard allume une seule LED à la fois, chacune pendant 200ms
+
+Les mesures à l'oscilloscope confirment les durées calculées.
+
+**Difficultées rencontrées**
+- **Configuration du BSP, trouver les bon menus, etc.
+- **L'apparition et disparition du kit ETML-ES dans le BSP
+
