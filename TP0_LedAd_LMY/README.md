@@ -37,7 +37,7 @@ C'est un timer 16 bits (max. 65535). Avec un prescaler de 64, on obtiendrait 124
 
 ## 2. Timing du chenillard (LED0 à LED3)
 
-![Chenillard LED0-LED3](images/chenillard.png)
+
 
 **Réglages de l'oscilloscope :** CH1 = LED0, CH2 = LED1, CH3 = LED2, CH4 = LED3, base de temps 200 ms/div, déclenchement sur le flanc descendant de CH1.
 
@@ -49,7 +49,7 @@ La durée de 200 ms correspond à 2 interruptions du timer 1 (2 × 100 ms).
 
 ## 3. Durée de 3 s avant `APP_STATE_SERVICE_TASKS`
 
-![Délai de 3 s](images/delai_3s.png)
+
 
 **Réglages de l'oscilloscope :** CH1 = LED1, base de temps 500 ms/div, mode *Single*, déclenchement sur le flanc descendant, puis appui sur le bouton reset du kit.
 
