@@ -61,4 +61,9 @@ Après 30 interruptions (30 × 100 ms = 3 s), l'interruption appelle "APP_Update
 La durée mesurée entre l'allumage et l'extinction est de 3.05s (valeur attendue : 3 s).
 
 ** Remarques : **
-Sur l'oscillogramme, après les 3s d'attente, c'est la LED1 (trace verte) qui s'allume en premier
+Sur l'oscillogramme, après les 3s d'attente, c'est la LED1 (trace verte) qui s'allume en premier et non la LED0 (trace jaune). Ca vient de la façon dont la fonction "chenillard()" est écrite.
+
+<img width="448" height="529" alt="image" src="https://github.com/user-attachments/assets/f83a9480-3aab-4f45-b6b5-a1e541bd1c04" />
+
+La variable "led" démarre à 0, mais elle est incrémentée avant l'allumage. Au premier changement de LED, le programme éteint donc la LED0, passe à la LED1 et l'allume. c'est la raison pour laquelle la LED1 est allumée en premier. Si on veut allumer la LED0 en premier il faudrait initialiser la variable "led" à 7.
+
