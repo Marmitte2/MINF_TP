@@ -13,12 +13,14 @@
 
 | Paramètre | Valeur |
 |---|---|
-| Driver | Instance statique, `TMR_ID_1` |
+| Driver Implementation | STATIC |
+| Timer Module ID | TMR_ID_1 |
 | Mode | 16 bits, interruption activée |
-| Priorité d'interruption | 3 (`ipl3AUTO`) |
-| Horloge source | PBCLK = **80 MHz** *(à vérifier)* |
-| Prescaler | **256** |
-| Période (PR1) | **31249** |
+| Interrupt priority | INT_PRIORITY_LEVEL3 |
+| Interrupt Sub-priority | INT_SUBPRIORITY_LEVEL0 |
+| Clock Source | DRV_TMR_CLKSOURCE_INTERNAL (80MHz) |
+| Prescaler | 256 |
+| Timer Period | 31249 |
 
 **Calcul :**
 
