@@ -36,7 +36,7 @@ Timer Period = (f_timer × T) - 1   = (312 500 × 0,1) - 1 = 31 249
 -> Légende : PBCLK (fréquence interne du PIC -> 80MHz), T période d'interruption (toutes les 100ms -> selon consigne TP)
 ```
 
-`C'est un timer` 16 bits (max. 65535). Avec un prescaler de 64, on obtiendrait 124 999, une valeur trop grande !! Le prescaler 256 est donc celui qu'il faut utiliser.
+C'est un timer 16 bits (max. 65535). Avec un prescaler de 64, on obtiendrait 124 999, une valeur trop grande !! Le prescaler 256 est donc celui qu'il faut utiliser.
 
 ## 2. Timing du chenillard (LED0 à LED3)
 
