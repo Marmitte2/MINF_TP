@@ -9,8 +9,6 @@
 - L'ADC du PIC sera aussi utilisé pour afficher les valeur brutes de 2 potentiomètre (0 à 1023) sur l'écran LCD
 - La configuration du Timer 1 ainsi que les calculs sont expliqués dans ce document
 
-Fichiers principaux : `firmware/src/app.c`, `firmware/src/app.h`, `firmware/src/system_config/default/system_interrupt.c`
-
 ## 1. Configuration du timer 1
 
 | Paramètre | Valeur |
