@@ -59,3 +59,6 @@ La durée de 200 ms correspond à 2 interruptions du timer 1 (2 × 100 ms).
 Dans l'état "APP_STATE_INIT", toutes les LEDs sont allumées pendant 3 secondes (sortie à 0 V) et le timer 1 est démarré.
 Après 30 interruptions (30 × 100 ms = 3 s), l'interruption appelle "APP_UpdateState(APP_STATE_SERVICE_TASKS)". Au premier passage dans cet état, toutes les LEDs sont éteintes (selon consigne).
 La durée mesurée entre l'allumage et l'extinction est de 3.05s (valeur attendue : 3 s).
+
+** Remarques : **
+Sur l'oscillogramme, après les 3s d'attente, c'est la LED1 (trace verte) qui s'allume en premier
