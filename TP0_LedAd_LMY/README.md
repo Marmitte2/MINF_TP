@@ -5,10 +5,9 @@
 
 ## Description
 
-- Traitement cyclique toutes les 100 ms déclenché par l'interruption du timer 1.
-- Lecture de 2 potentiomètres avec l'ADC interne, valeurs brutes affichées sur la 3ème ligne du LCD (`Ch0 xxxx / Ch1 yyyy`).
-- Chenillard sur les 8 LEDs du kit : une seule LED allumée à la fois, décalage toutes les 200 ms.
-- Démarrage du traitement cyclique 3 s après l'initialisation.
+- Le but du TP est de réaliser un chenillard en utilisant le Timer 0 du PIC32
+- L'ADC du PIC sera aussi utilisé pour afficher les valeur brutes de 2 potentiomètre (0 à 1023) sur l'écran LCD
+- La configuration du Timer 1 ainsi que les calculs sont expliqués dans ce document
 
 Fichiers principaux : `firmware/src/app.c`, `firmware/src/app.h`, `firmware/src/system_config/default/system_interrupt.c`
 
