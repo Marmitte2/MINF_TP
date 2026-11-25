@@ -6,8 +6,8 @@
 
 ## Description
 
-- Le but du TP est de réaliser un chenillard en utilisant le Timer 0 du PIC32
-- L'ADC du PIC sera aussi utilisé pour afficher les valeur brutes de 2 potentiomètre (0 à 1023) sur l'écran LCD
+- Le but du TP est de réaliser un chenillard en utilisant le Timer 1 du PIC32
+- L'ADC du PIC sera aussi utilisé pour afficher les valeurs brutes de 2 potentiomètre (0 à 1023) sur l'écran LCD
 - La configuration du Timer 1 ainsi que les calculs sont expliqués dans ce document
 
 ## 1. Configuration du timer 1
@@ -54,31 +54,31 @@ La durée de 200 ms correspond à 2 interruptions du timer 1 (2 × 100 ms).
 
 <img width="1461" height="913" alt="Capture d&#39;écran 2026-11-23 152314" src="https://github.com/user-attachments/assets/ff0beb56-4f81-455e-aa93-523d6b866e56" />
 
-**Réglages de l'oscilloscope :** CH1 = LED1, base de temps 500 ms/div, mode "Single", déclenchement sur le flanc descendant, puis appui sur le bouton reset du kit.
+**Réglages de l'oscilloscope :** CH1 = LED0, CH2 = LED1, base de temps 500 ms/div, déclenchement sur le flanc descendant, puis appui sur le bouton reset du kit.
 
 **Commentaire :**
 Dans l'état "APP_STATE_INIT", toutes les LEDs sont allumées pendant 3 secondes (sortie à 0 V) et le timer 1 est démarré.
 Après 30 interruptions (30 × 100 ms = 3 s), l'interruption appelle "APP_UpdateState(APP_STATE_SERVICE_TASKS)". Au premier passage dans cet état, toutes les LEDs sont éteintes (selon consigne).
-La durée mesurée entre l'allumage et l'extinction est de 3.05s (valeur attendue : 3 s).
+La durée mesurée entre l'allumage et l'extinction est de 3.05s (valeur attendue : 3 s). La différence entre la valeur théorique (3s) et la valeur mesurée (3.05s) peut être expliquée par la précision des curseurs sur l'oscillogramme.
 
-** Remarques : **
+**Remarques :**
 Sur l'oscillogramme, après les 3s d'attente, c'est la LED1 (trace verte) qui s'allume en premier et non la LED0 (trace jaune). Ca vient de la façon dont la fonction "chenillard()" est écrite.
 
 <img width="448" height="529" alt="image" src="https://github.com/user-attachments/assets/f83a9480-3aab-4f45-b6b5-a1e541bd1c04" />
 
-La variable "led" démarre à 0, mais elle est incrémentée avant l'allumage. Au premier changement de LED, le programme éteint donc la LED0, passe à la LED1 et l'allume. c'est la raison pour laquelle la LED1 est allumée en premier. Si on veut allumer la LED0 en premier il faudrait initialiser la variable "led" à 7.
+La variable "led" démarre à 0, mais elle est incrémentée avant l'allumage. Au premier changement de LED, le programme éteint donc la LED0, passe à la LED1 et l'allume. C'est la raison pour laquelle la LED1 est allumée en premier. Si on veut allumer la LED0 en premier il faudrait initialiser la variable "led" à 7.
 
 ## Conclusion
 
 Le programme répond au cahier des charges du TP :
 - le timer 1 génère une interruption toutes les 100ms
 - après un délai de 3 secondes, la machine d'état passe dans "APP_STATE_SERVICE_TASKS"
-- les 2 potentiomètres sont lus par l'ADC et leur valeur brutes s'affichent sur le LCD
+- les 2 potentiomètres sont lus par l'ADC et leur valeurs brutes s'affichent sur le LCD
 - le chenillard allume une seule LED à la fois, chacune pendant 200ms
 
 Les mesures à l'oscilloscope confirment les durées calculées.
 
-**Difficultées rencontrées**
-- Configuration du BSP, trouver les bon menus, etc.
+**Difficultés rencontrées**
+- Configuration du BSP, trouver les bons menus, etc.
 - L'apparition et disparition du kit ETML-ES dans le BSP
 
