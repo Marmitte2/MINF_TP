@@ -1,8 +1,7 @@
-# TP0 – LEDs et lecture A/D (PIC32MX795F512L)
+# TP0 – Chenillard et lecture AD (PIC32MX795F512L)
 
-**Auteur :** Prénom Nom
+**Auteur :** Loïc Marmy
 **Cours :** MINF – ETML-ES
-**Outils :** MPLAB X IDE v6.15, MPLAB Harmony v2, XC32, programmateur SNAP
 
 ## Description
 
