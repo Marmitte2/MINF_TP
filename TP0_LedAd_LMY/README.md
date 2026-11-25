@@ -51,11 +51,11 @@ La durée de 200 ms correspond à 2 interruptions du timer 1 (2 × 100 ms).
 
 ## 3. Durée de 3 s avant `APP_STATE_SERVICE_TASKS`
 
+<img width="1461" height="913" alt="Capture d&#39;écran 2026-11-23 152314" src="https://github.com/user-attachments/assets/ff0beb56-4f81-455e-aa93-523d6b866e56" />
 
-
-**Réglages de l'oscilloscope :** CH1 = LED1, base de temps 500 ms/div, mode *Single*, déclenchement sur le flanc descendant, puis appui sur le bouton reset du kit.
+**Réglages de l'oscilloscope :** CH1 = LED1, base de temps 500 ms/div, mode "Single", déclenchement sur le flanc descendant, puis appui sur le bouton reset du kit.
 
 **Commentaire :**
-Dans l'état `APP_STATE_INIT`, toutes les LEDs sont allumées (sortie à 0 V) et le timer 1 est démarré.
-Après 30 interruptions (30 × 100 ms = 3 s), l'interruption appelle `APP_UpdateState(APP_STATE_SERVICE_TASKS)`. Au premier passage dans cet état, toutes les LEDs sont éteintes (sortie remontée à 3,3 V).
-La durée mesurée entre l'allumage et l'extinction est de **___ s** (valeur attendue : 3 s).
+Dans l'état `APP_STATE_INIT`, toutes les LEDs sont allumées pendant 3 secondes (sortie à 0 V) et le timer 1 est démarré.
+Après 30 interruptions (30 × 100 ms = 3 s), l'interruption appelle `APP_UpdateState(APP_STATE_SERVICE_TASKS)`. Au premier passage dans cet état, toutes les LEDs sont éteintes (selon consigne).
+La durée mesurée entre l'allumage et l'extinction est de 3.05s (valeur attendue : 3 s).
